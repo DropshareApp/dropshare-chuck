@@ -20,28 +20,28 @@
         margin: 0;
         padding: 0;
       }
-      h1 {
+      [role="banner"] h1 {
         font: 300 16px/1.13 'Raleway', 'Open Sans', 'Helvetica', sans-serif;
         letter-spacing: 2px;
         text-transform: uppercase;
       }
-      h1 a {
+      [role="banner"] h1 a {
         color: #FFF;
         text-decoration: none;
         transition: opacity 225ms ease;
       }
-      h1 a:hover {
+      [role="banner"] h1 a:hover {
         opacity: 0.6;
       }
-      h2 {
+      [role="main"] header h2 {
         font: 200 26px/1.16 'Raleway', 'Open Sans', 'Helvetica', sans-serif;
       }
-      h2 a {
+      [role="main"] header h2 a {
         color: #1a1a1a;
         text-decoration: none;
         transition: opacity 225ms ease;
       }
-      h2 a:hover {
+      [role="main"] header h2 a:hover {
         opacity: 0.6;
       }
       [role="banner"],
@@ -83,11 +83,286 @@
       [role="contentinfo"] a:hover {
         color: #EEE;
       }
+      .markdown {
+        color: #444;
+        font: 300 16px/1.75 'Open Sans', 'Helvetica', sans-serif
+      }
+      .markdown a {
+        color: #444;
+        font-weight: 400;
+      }
+      .markdown strong {
+        font-weight: bold;
+      }
+      .markdown h1 {
+        font-size: 2em;
+        margin: 0.67em 0;
+      }
+      .markdown img {
+        border: 0;
+      }
+      .markdown hr {
+        box-sizing: content-box;
+        height: 0;
+      }
+      .markdown pre {
+        overflow: auto;
+      }
+      .markdown code,
+      .markdown kbd,
+      .markdown pre {
+        font-family: monospace, monospace;
+        font-size: 1em;
+      }
+      .markdown a {
+        text-decoration: underline;
+      }
+      .markdown hr {
+        height: 0;
+        margin: 15px 0;
+        overflow: hidden;
+        background: transparent;
+        border: 0;
+        border-bottom: 1px solid #ddd;
+      }
+      .markdown hr:before {
+        display: table;
+        content: "";
+      }
+      .markdown hr:after {
+        display: table;
+        clear: both;
+        content: "";
+      }
+      .markdown h1,
+      .markdown h2,
+      .markdown h3,
+      .markdown h4,
+      .markdown h5,
+      .markdown h6 {
+        margin-top: 15px;
+        margin-bottom: 15px;
+        line-height: 1.1;
+      }
+      .markdown h1 {
+        font-size: 30px;
+      }
+      .markdown h2 {
+        font-size: 21px;
+      }
+      .markdown h3 {
+        font-size: 16px;
+      }
+      .markdown h4 {
+        font-size: 14px;
+      }
+      .markdown h5 {
+        font-size: 12px;
+      }
+      .markdown h6 {
+        font-size: 11px;
+      }
+      .markdown blockquote {
+        margin: 0;
+      }
+      .markdown ul,
+      .markdown ol {
+        padding: 0;
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+      .markdown ol ol,
+      .markdown ul ol {
+        list-style-type: lower-roman;
+      }
+      .markdown ul ul ol,
+      .markdown ul ol ol,
+      .markdown ol ul ol,
+      .markdown ol ol ol {
+        list-style-type: lower-alpha;
+      }
+      .markdown dd {
+        margin-left: 0;
+      }
+      .markdown code {
+        font-family: monospace;
+        font-size: 12px;
+      }
+      .markdown pre {
+        margin-top: 0;
+        margin-bottom: 0;
+        font: 12px monospace;
+      }
+      .markdown>*:first-child {
+        margin-top: 0 !important;
+      }
+      .markdown>*:last-child {
+        margin-bottom: 0 !important;
+      }
+      .markdown a:not([href]) {
+        color: inherit;
+        text-decoration: none;
+      }
+      .markdown h1,
+      .markdown h2,
+      .markdown h3,
+      .markdown h4,
+      .markdown h5,
+      .markdown h6 {
+        margin-top: 1em;
+        margin-bottom: 16px;
+        font-weight: bold;
+        line-height: 1.4;
+      }
+      .markdown h1 {
+        padding-bottom: 0.3em;
+        font-size: 2.25em;
+        line-height: 1.2;
+        border-bottom: 1px solid #eee;
+      }
+      .markdown h2 {
+        padding-bottom: 0.3em;
+        font-size: 1.75em;
+        line-height: 1.225;
+        border-bottom: 1px solid #eee;
+      }
+      .markdown h3 {
+        font-size: 1.5em;
+        line-height: 1.43;
+      }
+      .markdown h4 {
+        font-size: 1.25em;
+      }
+      .markdown h5 {
+        font-size: 1em;
+      }
+      .markdown h6 {
+        font-size: 1em;
+        color: #777;
+      }
+      .markdown p,
+      .markdown blockquote,
+      .markdown ul,
+      .markdown ol,
+      .markdown dl,
+      .markdown table,
+      .markdown pre {
+        margin-top: 0;
+        margin-bottom: 16px;
+      }
+      .markdown hr {
+        height: 4px;
+        padding: 0;
+        margin: 16px 0;
+        background-color: #e7e7e7;
+        border: 0 none;
+      }
+      .markdown ul,
+      .markdown ol {
+        padding-left: 2em;
+      }
+      .markdown ul ul,
+      .markdown ul ol,
+      .markdown ol ol,
+      .markdown ol ul {
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+      .markdown li>p {
+        margin-top: 16px;
+      }
+      .markdown dl {
+        padding: 0;
+      }
+      .markdown dl dt {
+        padding: 0;
+        margin-top: 16px;
+        font-size: 1em;
+        font-style: italic;
+        font-weight: bold;
+      }
+      .markdown dl dd {
+        padding: 0 16px;
+        margin-bottom: 16px;
+      }
+      .markdown blockquote {
+        padding: 0 15px;
+        color: #777;
+        border-left: 4px solid #ddd;
+      }
+      .markdown blockquote>:first-child {
+        margin-top: 0;
+      }
+      .markdown blockquote>:last-child {
+        margin-bottom: 0;
+      }
+      .markdown img {
+        max-width: 100%;
+        box-sizing: content-box;
+        background-color: #fff;
+      }
+      .markdown code {
+        padding: 0;
+        padding-top: 0.2em;
+        padding-bottom: 0.2em;
+        margin: 0;
+        font-size: 85%;
+        background-color: rgba(0,0,0,0.04);
+        border-radius: 3px;
+      }
+      .markdown code:before,
+      .markdown code:after {
+        letter-spacing: -0.2em;
+        content: "\00a0";
+      }
+      .markdown pre>code {
+        padding: 0;
+        margin: 0;
+        font-size: 100%;
+        word-break: normal;
+        white-space: pre;
+        background: transparent;
+        border: 0;
+      }
+      .markdown .highlight {
+        margin-bottom: 16px;
+      }
+      .markdown .highlight pre,
+      .markdown pre {
+        padding: 16px;
+        overflow: auto;
+        font-size: 85%;
+        line-height: 1.45;
+        background-color: #f7f7f7;
+        border-radius: 3px;
+      }
+      .markdown .highlight pre {
+        margin-bottom: 0;
+        word-break: normal;
+      }
+      .markdown pre {
+        word-wrap: normal;
+      }
+      .markdown pre code {
+        display: inline;
+        max-width: initial;
+        padding: 0;
+        margin: 0;
+        overflow: initial;
+        line-height: inherit;
+        word-wrap: normal;
+        background-color: transparent;
+        border: 0;
+      }
+      .markdown pre code:before,
+      .markdown pre code:after {
+        content: normal;
+      }
       @media screen and (max-width: 825px) {
-        h1 {
+        [role="banner"] h1 {
           font-size: 14px;
         }
-        h2 {
+        [role="main"] header h2 {
           font-size: 18px;
           line-height: 1.23;
         }
@@ -125,7 +400,7 @@
     <footer role="contentinfo">
       <p>Shared by <a href="https://chuck.harmston.ch">Chuck Harmston</a>.</p>
     </footer>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.min.js"></script>
     <script>
       var videoMimes = {
         'mov': 'video/mp4',
@@ -136,11 +411,9 @@
       (function($) {
         $(function() {
           var $preview = $('[data-url]');
-          var ext = $preview.data('url').split('.').pop()
-
+          var ext = $preview.data('url').split('.').pop();
           // Add video player.
           if ($.inArray(ext, Object.keys(videoMimes)) >= 0) {
-            console.log('Video detected');
             var $video = $('<video />', {
               'class': 'video',
               'controls': 'controls'
@@ -153,9 +426,18 @@
               'text': 'Your browser cannot play this video.'
             }).appendTo($video);
             $video.appendTo($preview);
+          // inject Markdown pages converted to HTML.
+          } else if (ext == 'html') {
+            console.log('html detected');
+            $.get('__PATH__', {}, function(data) {
+              var $wrapper = $('<div />', {
+                'class': 'markdown'
+              });
+              $($.parseHTML(data)).filter(':not(meta)').appendTo($wrapper);
+              $wrapper.appendTo($preview);
+            });
           }
         });
-
       })(jQuery);
     </script>
     <script>

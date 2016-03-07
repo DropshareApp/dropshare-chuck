@@ -15,5 +15,6 @@ Paste the content of [index.html](index.html) into the appropriate place in the 
 
 ## TODO:
 
+- [x] HTML5 video player for video files.
+- [x] Basic CSS for Markdown -> HTML files.
 - [ ] HTML5 audio player for audio files.
-- [ ] HTML5 video player for video files.
