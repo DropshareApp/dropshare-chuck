@@ -66,7 +66,8 @@
         margin-left: 180px;
         padding: 40px 30px;
       }
-      .imagePreview img {
+      .imagePreview img,
+      .video {
         max-width: 100%;
       }
       [role="contentinfo"] {
@@ -119,11 +120,44 @@
       <header>
         <h2><a href="__PATH__">__FILENAME__</a></h2>
       </header>
-      <section>__PREVIEW__</section>
+      <section data-url="__PATH__">__PREVIEW__</section>
     </main>
     <footer role="contentinfo">
       <p>Shared by <a href="https://chuck.harmston.ch">Chuck Harmston</a>.</p>
     </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.slim.min.js"></script>
+    <script>
+      var videoMimes = {
+        'mov': 'video/mp4',
+        'mp4': 'video/mp4',
+        'ogg': 'video/ogg',
+        'webm': 'video/webm'
+      };
+      (function($) {
+        $(function() {
+          var $preview = $('[data-url]');
+          var ext = $preview.data('url').split('.').pop()
+
+          // Add video player.
+          if ($.inArray(ext, Object.keys(videoMimes)) >= 0) {
+            console.log('Video detected');
+            var $video = $('<video />', {
+              'class': 'video',
+              'controls': 'controls'
+            });
+            $('<source />', {
+              'mime': videoMimes[ext],
+              'src': '__PATH__'
+            }).appendTo($video);
+            $('<p/>', {
+              'text': 'Your browser cannot play this video.'
+            }).appendTo($video);
+            $video.appendTo($preview);
+          }
+        });
+
+      })(jQuery);
+    </script>
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
