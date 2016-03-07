@@ -1,11 +1,11 @@
 # dropshare-chuck
 
-Custom landing page for [Dropshare](http://getdropsha.re/).
+Custom landing page for [Dropshare](http://getdropsha.re/). Includes inline preview for:
 
-
-## Usage
-
-Paste the content of [index.html](index.html) into the appropriate place in the "Landing Page" section of the Dropshare preferences.
+- Images
+- Videos
+- Audio files
+- Markdown files (if the "Convert Markdown files to HTML" preference is enabled)
 
 
 ## Preview
@@ -13,8 +13,6 @@ Paste the content of [index.html](index.html) into the appropriate place in the 
 ![Preview of dropshare-chuck](preview.jpg)
 
 
-## TODO:
+## Usage
 
-- [x] HTML5 video player for video files.
-- [x] Basic CSS for Markdown -> HTML files.
-- [ ] HTML5 audio player for audio files.
+Paste the content of [index.html](index.html) into the appropriate place in the "Landing Page" section of the Dropshare preferences.

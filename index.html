@@ -402,16 +402,21 @@
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.min.js"></script>
     <script>
+      var audioMimes = {
+        'm4a': 'audio/mp4',
+        'mp3': 'audio/mpeg',
+        'wav': 'audio/wav'
+      };
       var videoMimes = {
         'mov': 'video/mp4',
         'mp4': 'video/mp4',
-        'ogg': 'video/ogg',
         'webm': 'video/webm'
       };
       (function($) {
         $(function() {
           var $preview = $('[data-url]');
           var ext = $preview.data('url').split('.').pop();
+
           // Add video player.
           if ($.inArray(ext, Object.keys(videoMimes)) >= 0) {
             var $video = $('<video />', {
@@ -426,9 +431,24 @@
               'text': 'Your browser cannot play this video.'
             }).appendTo($video);
             $video.appendTo($preview);
+
+            // Add audio player.
+          } else if ($.inArray(ext, Object.keys(audioMimes)) >= 0) {
+            var $audio = $('<audio />', {
+              'class': 'audio',
+              'controls': 'controls'
+            });
+            $('<source />', {
+              'mime': audioMimes[ext],
+              'src': '__PATH__'
+            }).appendTo($audio);
+            $('<p/>', {
+              'text': 'Your browser cannot play this audio.'
+            }).appendTo($audio);
+            $audio.appendTo($preview);
+
           // inject Markdown pages converted to HTML.
           } else if (ext == 'html') {
-            console.log('html detected');
             $.get('__PATH__', {}, function(data) {
               var $wrapper = $('<div />', {
                 'class': 'markdown'
